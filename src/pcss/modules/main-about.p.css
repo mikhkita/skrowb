@@ -1,0 +1,37 @@
+.main-about{
+	padding: 90px 0px 85px;
+
+	p{
+		max-width: 894px;
+	}
+	h3.title{
+		margin-bottom: 50px;
+	}
+}
+	.about-advantages{
+		width: 100%;
+		margin-bottom: 24px;
+
+		&__item{
+		    position: relative;
+		    margin-right: 25px;
+		    display: inline-block;
+		    vertical-align: top;
+		    width: calc( 100% / 3 - 23px );
+
+			&:last-child{
+				margin-right: 0px;
+			}
+
+			&-image{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}	
+
+			p{
+				padding-left: 84px;
+				line-height: 22px;
+			}
+		}
+	}

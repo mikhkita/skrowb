@@ -1,0 +1,55 @@
+.pagination{
+	padding-top: 21px;
+	color: #4A4A4A;
+
+	&__item{
+		position: relative;
+		float: left;
+		font-size: 18px;
+		line-height: 22px;
+		font-family: ProximaNova-Regular;
+
+		&:before{
+			font-size: 18px;
+			color: #00AEEF;
+			position: absolute;
+			top: 2px;
+			-webkit-transition: transform 150ms ease-out;
+			   -moz-transition: transform 150ms ease-out;
+			    -ms-transition: transform 150ms ease-out;
+			   	 -o-transition: transform 150ms ease-out;
+					transition: transform 150ms ease-out;
+		}
+		&:hover:before{
+
+		}
+	}
+	&__prev{
+	    padding-left: 20px;
+		margin-right: 43px;
+		
+		&:before{
+			left: 0px;
+		}
+		&:hover:before{
+			-webkit-transform: translateX(-7px);
+			   -moz-transform: translateX(-7px);
+			    -ms-transform: translateX(-7px);
+			   	 -o-transform: translateX(-7px);
+					transform: translateX(-7px);
+		}
+	}
+	&__next{
+
+		&:before{
+			right: -21px;
+		}
+		&:hover:before{
+			-webkit-transform: translateX(7px);
+			   -moz-transform: translateX(7px);
+			    -ms-transform: translateX(7px);
+			   	 -o-transform: translateX(7px);
+					transform: translateX(7px);
+		}
+	}
+}

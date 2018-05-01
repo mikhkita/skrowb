@@ -1,0 +1,31 @@
+.papers{
+	font-size: 0px;
+}
+.papers-item{
+	display: inline-block;
+	vertical-align: top;
+	width: calc( (100% - 40px) / 3 );
+	margin-right: 20px;
+	margin-bottom: 40px;
+	background-color: #F5F5F5;
+
+	&:nth-child(3n){
+		margin-right: -2px;
+	}
+	&__image{
+		background-position: 50% 50%;
+		background-size: cover;
+		height: 141px;
+	}
+	&__title{
+		font-family: ProximaNova-Semibold;
+		font-size: 18px;
+		color: #00AEEF;
+		padding: 12px 15px 15px;
+		line-height: 22px;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}

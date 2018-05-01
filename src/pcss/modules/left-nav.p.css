@@ -1,0 +1,24 @@
+.left-nav{
+	float: left;
+	width: calc( (100% - 60px) / 4 );
+	margin-right: 20px;
+}
+.left-menu{
+	padding-top: 2px;
+
+	li{
+		margin-bottom: 22px;
+	}
+	a{
+		font-family: ProximaNova-Regular;
+		font-size: 18px;
+		letter-spacing: -0.11px;
+		text-transform: uppercase;
+
+		&.active,
+		&:hover{
+			color: #00AEEF;
+			text-decoration: underline;
+		}
+	}
+}

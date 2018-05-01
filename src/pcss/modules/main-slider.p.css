@@ -1,0 +1,37 @@
+.main-slider{
+	width: 100%;
+	height: 679px;
+	position: relative;
+	overflow: hidden;
+
+	.block{
+		position: absolute;
+		bottom: 60px;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		   -moz-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		   	 -o-transform: translateX(-50%);
+				transform: translateX(-50%);
+	}
+	&__title{
+		font-size: 45px;
+		line-height: 44px;
+		text-align: left;
+		font-family: "Calibri-Bold";
+		text-transform: uppercase;
+		color: #FFF;
+	}
+	video{
+		position: absolute;
+		left: 0px;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		   -moz-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		   	 -o-transform: translateY(-50%);
+				transform: translateY(-50%);
+		min-width: 100%; 
+    	min-height: 100%;
+	}
+}

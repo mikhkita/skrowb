@@ -1,0 +1,24 @@
+@define-mixin crosshair $containerSize,$borderWidth,$crosshairSize,$color {
+    display: block;
+    size: $containerSize;
+    position: relative;
+    background-color: #F3F3F3;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        position: absolute calc(($containerSize / 2) - ($crosshairSize / 2)) calc(($containerSize / 2) - ($crosshairSize / 2)) 0 0;
+        width: calc($crosshairSize / 1.41);
+        height: $borderWidth;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg) translateZ(0px);
+        background-color: $color;
+        margin: auto;
+    }
+
+    &:before {
+        transform: rotate(-45deg);
+    }
+}

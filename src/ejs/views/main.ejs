@@ -1,0 +1,431 @@
+<%- include('../layout/_head', {title: 'Design and development of comprehensive software systems for fast-growing businesses'}) %>
+    <%- include('../layout/_header') %>
+
+<div class="main-slider">
+	<video autoplay muted loop id="myVideo">
+		<source src="video/main.mp4" type="video/mp4">
+	</video>
+	<div class="block">
+		<h1 class="main-slider__title">Design and development of comprehensive software systems for fast-growing businesses</h1>
+	</div>
+</div>
+
+<div class="main-about">
+	<div class="block">
+		<h3 class="title">Bitworks is a developer of scalable software solutions with high availability that need:</h3>
+		<div class="about-advantages">
+			<div class="about-advantages__item">
+				<img class="about-advantages__item-image" src="i/data.svg"/>
+				<p>big data analysis and data mining and machine learning;</p>
+			</div>
+			<div class="about-advantages__item">
+				<img class="about-advantages__item-image" src="i/graph.svg"/>
+				<p>high-performance, scalable,<br>high-load, distributed architecture server components;</p>
+			</div>
+			<div class="about-advantages__item">
+				<img class="about-advantages__item-image" src="i/git.svg"/>
+				<p>microservice approach based on loosely coupled agents.</p>
+			</div>
+		</div>
+		<p>We can deliver the most value to customers who need to create a product that works in a sophisticated application domain, with high project failure risks due to underestimated project complexity or inadequate expertise of the performing party, and where the architecture has to be carefully elaborated and compared to similar approaches using a viable PoC, and high quality has to be maintained by having IT professionals of different profiles in the same R&D department: developers, QA engineers, system administrators, technical writers and project managers.</p>
+		<p>As of now, our team includes over 40 IT professionals and other miscellaneous personnel.</p>
+		<p>In the course of project delivery we aim not only at meeting customers requirements but also strive to maintain high quality at every stage so that further project development will be straightforward and predictable.</p>
+		<p>We use best development practices, such as PoC, DDD, continuous integration, Scrum, automated and manual QA and Git-flow.</p>
+	</div>
+</div>
+
+<div class="main-indust slide grey">
+	<div class="block">
+		<h2 class="title">Industries</h2>
+		<h4 class="subtitle">We develop solutions for different<br>areas of business</h4>
+		<%
+			var arItems = [
+				{ class: "icon-cloud", title: "Telecommunications" },
+				{ class: "icon-plus", title: "Healthcare" },
+				{ class: "icon-bag", title: "Retail" },
+				{ class: "icon-truck", title: "Logistics and transportation" },
+				{ class: "icon-megaphone", title: "Advertising management" },
+				{ class: "icon-money", title: "Financial technologies" },
+				{ class: "icon-settings", title: "Production<br>sector" },
+			];
+		%>
+		<div class="indust-cont clearfix">
+			<div class="indust-thumbs">
+				<% for( arItem of arItems ){ %>
+				<a href="#" class="indust-thumbs__item">
+					<span class="indust-thumbs__item-img <%- arItem.class %>"></span>
+					<div class="indust-thumbs__item-title"><%- arItem.title %></div>
+				</a>
+				<% } %>
+				<div class="indust-thumbs__hover"></div>
+			</div>
+			<div class="indust-slider">
+				<% for( arItem of arItems ){ %>
+				<div class="indust-slider__item">
+						<h3 class="indust-slider__item-title"><%- arItem.title.replace("<br>"," ") %></h3>
+						<div class="indust-slider__item-text">We can deliver the most value to customers who need to create a product that works in a sophisticated application domain, with high project failure risks due to underestimated project complexity or inadequate expertise of the performing party, and where the architecture has to be carefully elaborated and compared to similar approaches using a viable PoC, and high quality has to be maintained by having IT professionals of different profiles in the same R&D department: developers, QA engineers, system administrators, technical writers and project managers.</div>
+					</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="main-stacks slide">
+	<div class="block">
+		<h2 class="title">Stacks</h2>
+		<h4 class="subtitle">We develop solutions for different<br>areas of business</h4>
+		<div class="stacks">
+			<div class="stacks__item">
+				<img src="i/ie.svg" alt="">
+				<div class="stacks__item-title">Machine learning / Extract, Transform, and Load</div>
+				<div class="stacks__item-description">Ultimate stack for data science, ETL and machine learning</div>
+				<ul class="stacks__item-list list">
+					<li>Scikit</li>
+					<li>Tensorflow</li>
+					<li>Apache Spark</li>
+					<li>Python 3</li>
+					<li>Cassandra</li>
+					<li>Elasticsearch</li>
+					<li>CUDA GPGPU Computing</li>
+				</ul>
+			</div>
+			<div class="stacks__item">
+				<img src="i/internet.svg" alt="">
+				<div class="stacks__item-title">Rich Internet<br>Applications</div>
+				<div class="stacks__item-description">Frontend stack for responsive beautiful business and administrative interfaces</div>
+				<ul class="stacks__item-list list">
+					<li>Angular 2, React</li>
+					<li>Typescript</li>
+					<li>Node</li>
+					<li>Twitter Bootstrap</li>
+					<li>Google Material Design</li>
+					<li>Bower</li>
+				</ul>
+			</div>
+			<div class="stacks__item">
+				<img src="i/scala.svg" alt="">
+				<div class="stacks__item-title">Scala High<br>Performance Stack</div>
+				<div class="stacks__item-description">Efficient stack for scalable, high performance robust applications</div>
+				<ul class="stacks__item-list list">
+					<li>Akka</li>
+					<li>Scala</li>
+					<li>Apache Spark</li>
+					<li>PostgreSQL</li>
+					<li>Elasticsearch</li>
+					<li>Apache Kafka</li>
+					<li>Cassandra</li>
+					<li>Apache Zookeeper</li>
+					<li>SBT</li>
+				</ul>
+			</div>
+			<div class="stacks__item">
+				<img src="i/java.svg" alt="">
+				<div class="stacks__item-title">Java SE Stack</div>
+				<div class="stacks__item-description">Sound backend stack for mature businesses with conservative technology strategy</div>
+				<ul class="stacks__item-list list">
+					<li>Spring</li>
+					<li>Guava</li>
+					<li>Java 8</li>
+					<li>Maven</li>
+					<li>PostgreSQL, Oracle</li>
+					<li>JMS</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="main-customers slide blue">
+	<div class="block">
+		<h2 class="title">Customers</h2>
+		<p>We love doing projects that are challenging and present non-trivial problems and room for improvement. We have vast experience in the development and support of long-term projects: as of today, human resource investments in our largest project are over 250 man-years (which translates into an actual life cycle of more than 9 years).</p>
+		<div class="customers clearfix">
+			<div class="customers__item">
+				<div class="customers__item-front" style="background-image: url('i/kind-1.png');">
+					<div class="kinds">
+						<div class="kinds__item">AdTech</div>
+						<div class="kinds__item">FinTech</div>
+					</div>
+				</div>
+				<div class="customers__item-text">NYIAX is the worlds first advertising contract exchange. </div>
+			</div>
+			<div class="customers__item">
+				<div class="customers__item-front" style="background-image: url('i/kind-2.png');">
+					<div class="kinds">
+						<div class="kinds__item">AdTech</div>
+						<div class="kinds__item">FinTech</div>
+					</div>
+				</div>
+				<div class="customers__item-text">NYIAX is the worlds first advertising contract exchange. Powered by Nasdaq technology, the blockchain-enabled platform combines financial </div>
+			</div>
+			<div class="customers__item">
+				<div class="customers__item-front" style="background-image: url('i/kind-3.png');">
+					<div class="kinds">
+						<div class="kinds__item">AdTech</div>
+						<div class="kinds__item">FinTech</div>
+					</div>
+				</div>
+				<div class="customers__item-text">NYIAX is the worlds first advertising contract exchange. NYIAX is the worlds first advertising contract exchange. Powered by Nasdaq technology, the blockchain-enabled platform combines financial </div>
+			</div>
+			<div class="customers__item">
+				<div class="customers__item-front" style="background-image: url('i/kind-4.png');">
+					<div class="kinds">
+						<div class="kinds__item">AdTech</div>
+						<div class="kinds__item">FinTech</div>
+					</div>
+				</div>
+				<div class="customers__item-text">NYIAX is the worlds first advertising contract exchange. Powered by Nasdaq technology, the blockchain-enabled platform combines financial </div>
+			</div>
+			<div class="customers__item">
+				<div class="customers__item-front" style="background-image: url('i/kind-5.png');">
+					<div class="kinds">
+						<div class="kinds__item">AdTech</div>
+						<div class="kinds__item">FinTech</div>
+					</div>
+				</div>
+				<div class="customers__item-text">NYIAX is the worlds first advertising contract exchange. Powered by Nasdaq technology, the blockchain-enabled platform combines financial </div>
+			</div>
+			<div class="customers__item">
+				<div class="customers__item-front" style="background-image: url('i/kind-6.png');">
+					<div class="kinds">
+						<div class="kinds__item">AdTech</div>
+						<div class="kinds__item">FinTech</div>
+					</div>
+				</div>
+				<div class="customers__item-text">NYIAX is the worlds first advertising contract exchange. Powered by Nasdaq technology, the blockchain-enabled platform combines financial </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="main-careers slide gray">
+	<div class="block">
+		<h2 class="title">Careers</h2>
+		<div class="tabs">
+			<a href="#" class="tabs__item" data-id="city-1">Tomsk</a>
+			<a href="#" class="tabs__item" data-id="city-2">NY</a>
+			<a href="#" class="tabs__item" data-id="city-3">Berlin</a>
+		</div>
+		<div class="tabs-block clearfix" id="city-1">
+			<div class="tabs-block__thumbs vacancy-list clearfix">
+				<a href="#" class="vacancy-item" data-id="job-1-1">
+					<div class="vacancy-item__simple-title">JAVA</div>
+				</a>
+				<a href="#" class="vacancy-item" data-id="job-1-2">
+					<div class="vacancy-item__simple-title">SCALA</div>
+				</a>
+				<a href="#" class="vacancy-item" data-id="job-1-3">
+					<div class="vacancy-item__simple-title">DevOps</div>
+				</a>
+				<a href="#" class="vacancy-item" data-id="job-1-4">
+					<div class="vacancy-item__big-title">
+						<h3>FE</h3>
+						<p>Front End</p>
+					</div>
+				</a>
+			</div>
+			<div class="tabs-block__jobs">
+				<div class="job-list" id="job-1-1">
+					<div class="job-item">
+						<h3 class="job-item__title">Java Junior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+					<div class="job-item">
+						<h3 class="job-item__title">Java Mid</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+					<div class="job-item">
+						<h3 class="job-item__title">Java Senior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+					<a href="#" class="job-list__more">Show more (<span>2</span>)</a>
+				</div>
+				<div class="job-list" id="job-1-2">
+					<div class="job-item">
+						<h3 class="job-item__title">Java Junior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="job-list" id="job-1-3">
+					<div class="job-item">
+						<h3 class="job-item__title">Java Junior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="job-list" id="job-1-4">
+					<div class="job-item">
+						<h3 class="job-item__title">Java Mid</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tabs-block clearfix" id="city-2">
+			<div class="tabs-block__thumbs vacancy-list clearfix">
+				<a href="#" class="vacancy-item" data-id="job-2-1">
+					<div class="vacancy-item__simple-title">JAVA</div>
+				</a>
+				<a href="#" class="vacancy-item" data-id="job-2-2">
+					<div class="vacancy-item__simple-title">SCALA</div>
+				</a>
+				<a href="#" class="vacancy-item" data-id="job-2-3">
+					<div class="vacancy-item__simple-title">DevOps</div>
+				</a>
+			</div>
+			<div class="tabs-block__jobs">
+				<div class="job-list" id="job-2-1">
+					<div class="job-item">
+						<h3 class="job-item__title">Java Junior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+					<div class="job-item">
+						<h3 class="job-item__title">Java Mid</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+					<div class="job-item">
+						<h3 class="job-item__title">Java Senior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+					<a href="#" class="job-list__more">Show more (<span>2</span>)</a>
+				</div>
+				<div class="job-list" id="job-2-2">
+					<div class="job-item">
+						<h3 class="job-item__title">Java Junior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="job-list" id="job-2-3">
+					<div class="job-item">
+						<h3 class="job-item__title">Java Junior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tabs-block clearfix" id="city-3">
+			<div class="tabs-block__thumbs vacancy-list clearfix">
+				<a href="#" class="vacancy-item" data-id="job-3-1">
+					<div class="vacancy-item__simple-title">JAVA</div>
+				</a>
+				<a href="#" class="vacancy-item" data-id="job-3-2">
+					<div class="vacancy-item__simple-title">SCALA</div>
+				</a>
+				<a href="#" class="vacancy-item" data-id="job-3-3">
+					<div class="vacancy-item__simple-title">DevOps</div>
+				</a>
+				<a href="#" class="vacancy-item" data-id="job-3-4">
+					<div class="vacancy-item__big-title">
+						<h3>FE</h3>
+						<p>Front End</p>
+					</div>
+				</a>
+			</div>
+			<div class="tabs-block__jobs">
+				<div class="job-list" id="job-3-1">
+					<div class="job-item">
+						<h3 class="job-item__title">Java Junior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+					<div class="job-item">
+						<h3 class="job-item__title">Java Mid</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+					<div class="job-item">
+						<h3 class="job-item__title">Java Senior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+					<a href="#" class="job-list__more">Show more (<span>2</span>)</a>
+				</div>
+				<div class="job-list" id="job-3-2">
+					<div class="job-item">
+						<h3 class="job-item__title">Java Junior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="job-list" id="job-3-3">
+					<div class="job-item">
+						<h3 class="job-item__title">Java Junior</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="job-list" id="job-3-4">
+					<div class="job-item">
+						<h3 class="job-item__title">Java Mid</h3>
+						<div class="job-item__text text">
+							<p>Our company is looking for a Python developer for the long-term partnership. The person will develop intelligent systems for current and further customers.</p> 
+							<p><b>Experience required:</b> 3-6 years. Full-time job.</p>
+							<p>Please find the detailed job description and apply at <a href="https://tomsk.hh.ru/vacancy/id" target="blank">https://tomsk.hh.ru/vacancy/id</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<%- include('../layout/_footer.ejs') %>
+<%- include('../layout/_foot.ejs') %>

@@ -1,0 +1,29 @@
+	<% if(typeof withNav != "undefined" && withNav == true){ %>
+			</div>
+		</div>
+	<% } %>
+</main>
+<footer class="main-contacts slide blue">
+	<div class="block">
+		<h2 class="title">Contacts</h2>
+		<h3 class="subtitle"><a href="mailto:info@bitworks-software.com">info@bitworks-software.com</a></h3>
+		<%
+			var arItems = [
+				{ country: "Russia", city: "Tomsk", addr: "Shishkova 13a", phone: "+7 (3822) 705-477" },
+				{ country: "Germany", city: "Hamburg", addr: "Wolfgang st., 14/2", phone: "+49 (040) 5 48 91 029" },
+				{ country: "USA", city: "Jersey City", addr: "NJ, 07302, 101 Hudson Street 21 Floor, office 2181", phone: "+1 929 402 8251" }
+			];
+		%>
+		<div class="addresse">
+			<% for( arItem of arItems ){ %>
+			<div class="addresse-item">
+				<div class="addresse-item__country"><%- arItem.country %></div>
+				<div class="addresse-item__city"><%- arItem.city %></div>
+				<div class="addresse-item__addr"><%- arItem.addr %></div>
+				<a href="tel:<%- arItem.phone %>" class="addresse-item__phone"><%- arItem.phone %></a>
+			</div>
+			<% } %>
+		</div>
+		<div class="copyright">Bitworks 2018, Ltd</div>
+	</div>
+</footer>

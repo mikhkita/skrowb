@@ -1,0 +1,54 @@
+.main-contacts{
+	color: #FFF;
+
+	h2.title{
+		margin-bottom: 28px;
+	}
+	h3.subtitle{
+		margin-bottom: 36px;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	.copyright{
+		position: absolute;
+		right: 55px;
+		bottom: -2px;
+		font-size: 16px;
+		line-height: 20px;
+		font-family: ProximaNova-Regular;
+	}
+}
+.addresse{
+
+	.addresse-item{
+		font-size: 16px;
+		line-height: 19px;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 70px;
+
+		&:last-child{
+			margin-right: 0px;
+		}
+		&__country{
+			margin-bottom: 8px;
+		}
+		&__city{
+			font-family: "Calibri-Bold";
+			font-size: 22px;
+			line-height: 27px;
+			margin-bottom: 6px;
+		}
+		&__addr{
+			margin-bottom: 14px;
+		}
+		&__phone{
+			
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}

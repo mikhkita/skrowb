@@ -1,0 +1,60 @@
+<%- include('../layout/_head', {title: 'News', inner: true}) %>
+    <%- include('../layout/_header', {withNav: true}) %>
+	<h1>Recent posts</h1>
+	<div class="news">
+		<div class="news-item fadeDown show-anim">
+			<h3 class="news-item__title"><a href="news_detail.html">Storing trees in RDBMS</a></h3>
+			<div class="news-item__date">Nov 24, 2017</div>
+			<div class="news-item__authors">Alena Kolesnikova, Valentin Rakhimov</div>
+			<div class="news-item__tags icon-tag"><a href="#">RDBMS</a>, <a href="#">Data modeling</a></div>
+			<div class="text">
+				<p>Trees are one of the ways to represent hierarchical structures and thus are used in many problem domains. This article discusses the four most popular ways of representing trees in RDBMS by using an example from a simple problem domain.</p>
+			</div>
+			<a href="news_detail.html" class="news-item__more">Read more …</a>
+		</div>
+		<div class="news-item fadeDown show-anim">
+			<h3 class="news-item__title"><a href="news_detail.html">Development process at Bitworks</a></h3>
+			<div class="news-item__date">Oct 30, 2017</div>
+			<div class="news-item__authors">Valentin Rakhimov, Maxim Khomich, Pavel Rastopyrov</div>
+			<div class="news-item__tags icon-tag"><a href="#">Development process</a>, <a href="#">Agile</a>, <a href="#">Scrum</a>, <a href="#">PMI</a></div>
+			<div class="text">
+				<p>At Bitworks, we develop scalable highly available comprehensive software systems. Each project is unique in its own way, and the criteria of the product quality differ significantly from case to case. Moreover, quality is a relative concept: customers, developers and end users may have different expectations from the product, and it is very important to achieve common understanding and agreement among all stakeholders.</p>
+			</div>
+			<a href="news_detail.html" class="news-item__more">Read more …</a>
+		</div>
+		<div class="news-item fadeDown show-anim">
+			<h3 class="news-item__title"><a href="news_detail.html">Network Traffic Analysis, Aggregation, Anomaly Detection and Prediction With Apache Kafka, Apache Spark and InfluxDB</a></h3>
+			<div class="news-item__date">Oct 18, 2017</div>
+			<div class="news-item__authors">Valentin Rakhimov</div>
+			<div class="news-item__tags icon-tag"><a href="#">Open source</a>, <a href="#">sflow</a>, <a href="#">PoC</a>, <a href="#">Kafka</a>, <a href="#">Spark</a>, <a href="#">InfluxDB</a>, <a href="#">Grafana</a></div>
+			<div class="text">
+				<p>One of our customers operates a large computer network. In order to maintain its healthy infrastructure, it is necessary to properly monitor all network activity, analyze traffic flows, and predict eventual problems.</p>
+				<p>However, even having been condensed by standardized statistical techniques, the flow of the data is still too big and raw to store and analyze without preliminary processing.</p>
+				<p>We were assigned the task to design a scalable distributed system for aggregating, enriching, and analysing large streams of network data.</p>
+			</div>
+			<a href="#" class="news-item__download">Download the whitepaper document as pdf</a>
+		</div>
+		<div class="news-item fadeDown show-anim">
+			<h3 class="news-item__title"><a href="news_detail.html">Storing trees in RDBMS</a></h3>
+			<div class="news-item__date">Nov 24, 2017</div>
+			<div class="news-item__authors">Alena Kolesnikova, Valentin Rakhimov</div>
+			<div class="news-item__tags icon-tag"><a href="#">RDBMS</a>, <a href="#">Data modeling</a></div>
+			<div class="text">
+				<p>Trees are one of the ways to represent hierarchical structures and thus are used in many problem domains. This article discusses the four most popular ways of representing trees in RDBMS by using an example from a simple problem domain.</p>
+			</div>
+			<a href="news_detail.html" class="news-item__more">Read more …</a>
+		</div>
+		<div class="news-item fadeDown show-anim">
+			<h3 class="news-item__title"><a href="news_detail.html">Development process at Bitworks</a></h3>
+			<div class="news-item__date">Oct 30, 2017</div>
+			<div class="news-item__authors">Valentin Rakhimov, Maxim Khomich, Pavel Rastopyrov</div>
+			<div class="news-item__tags icon-tag"><a href="#">Development process</a>, <a href="#">Agile</a>, <a href="#">Scrum</a>, <a href="#">PMI</a></div>
+			<div class="text">
+				<p>At Bitworks, we develop scalable highly available comprehensive software systems. Each project is unique in its own way, and the criteria of the product quality differ significantly from case to case. Moreover, quality is a relative concept: customers, developers and end users may have different expectations from the product, and it is very important to achieve common understanding and agreement among all stakeholders.</p>
+			</div>
+			<a href="news_detail.html" class="news-item__more">Read more …</a>
+		</div>
+	</div>
+	<div class="pagination clearfix"><a href="#" class="pagination__item pagination__prev icon-page-prev">Back</a><a href="#" class="pagination__item pagination__next icon-page-next">Next</a></div>
+	<%- include('../layout/_footer.ejs', {withNav: true}) %>
+<%- include('../layout/_foot.ejs') %>

@@ -1,0 +1,23 @@
+.main-careers{
+	
+}
+.tabs-block{
+	display: none;
+	
+	&__thumbs{
+		float: left;
+		width: calc( 50% - 10px );
+	}
+	&__jobs{
+		float: right;
+		width: calc( 50% - 10px );
+	}
+	&.active .vacancy-item{
+		opacity: 1;
+		-webkit-tranform: translateY(0px);
+		   -moz-tranform: translateY(0px);
+		    -ms-tranform: translateY(0px);
+		   	 -o-tranform: translateY(0px);
+				tranform: translateY(0px);
+	}
+}

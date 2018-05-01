@@ -1,0 +1,22 @@
+.tabs{
+	margin-top: 28px;
+	margin-bottom: 28px;
+
+	&__item{
+		font-family: ProximaNova-Bold;
+		font-size: 18px;
+		display: inline-block;
+		vertical-align: top;
+		line-height: 22px;
+		margin-right: 60px;
+
+		&:last-child{
+			margin-right: 0px;
+		}
+		&.active,
+		&:hover{
+			color: #00AEEF;
+			border-bottom: 1px solid #00AEEF;
+		}
+	}
+}

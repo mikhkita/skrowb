@@ -1,0 +1,103 @@
+.main-indust{
+
+}
+	.indust-cont{
+
+	}
+	.indust-thumbs{
+	    width: calc( 50% - 10px );
+	    float: left;
+	    padding-top: 21px;
+	    margin-bottom: -50px;
+	    position: relative;
+
+		&__hover{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			background: #EEEEEE;
+			box-shadow: 0 2px 14px 0 rgba(0,0,0,0.10);
+			z-index: 1;
+			-webkit-transition: all 150ms ease-out;
+			   -moz-transition: all 150ms ease-out;
+			    -ms-transition: all 150ms ease-out;
+			   	 -o-transition: all 150ms ease-out;
+					transition: all 150ms ease-out;
+		}
+		&__item{
+			z-index: 2;
+			padding-right: 1px;
+		    position: relative;
+		    display: inline-block;
+		    vertical-align: top;
+		    margin-right: 16px;
+		    margin-bottom: 50px;
+		    width: calc(100% / 3 - 14px);
+
+			&.active{
+				color: #00AEEF;
+			}
+			&:nth-child(3n){
+				margin-right: -2px;
+			}
+
+
+		}
+		&__item-img{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			font-size: 37px;
+
+			&.icon-cloud{
+			    top: 5px;
+				font-size: 33px;
+			}
+			&.icon-plus{
+				font-size: 37px;
+			}
+			&.icon-bag{
+
+			}
+			&.icon-truck{
+
+			}
+			&.icon-megaphone{
+			    top: -7px;
+				font-size: 43px;
+			}
+			&.icon-money{
+
+			}
+			&.icon-settings{
+			    font-size: 38px;
+				top: 1px;
+			}
+		}
+		&__item-title{
+			padding-top: 53px;
+			font-size: 18px;
+			line-height: 22px;
+			font-family: ProximaNova-Bold;
+		}
+	}
+	.indust-slider{
+		width: calc( 50% - 10px );
+		float: right;
+		margin-top: 18px;
+
+		&__item{
+
+			&-title{
+				font-family: ProximaNova-Bold;
+				font-size: 25px;
+				line-height: 30px;
+				margin-bottom: 20px;
+			}
+			&-text{
+				font-size: 18px;
+	    		line-height: 23px;
+				max-width: 484px;
+			}
+		}
+	}

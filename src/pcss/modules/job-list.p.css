@@ -1,0 +1,40 @@
+.job-list{
+	display: none;
+
+	.job-item{
+		margin-bottom: 36px;
+
+		&__title{
+			font-family: ProximaNova-Bold;
+			font-size: 25px;
+			margin-bottom: 25px;
+			line-height: 30px;
+		}
+		&__text{
+
+			p{
+				line-height: 18px;
+			}
+		}
+		&:nth-child(n+3){
+			display: none;
+		}
+	}
+	&.opened .job-item:nth-child(n+3){
+		display: block;
+	}
+
+	&__more{
+		/* display: none; */
+		font-family: ProximaNova-Semibold;
+		font-size: 16px;
+		color: #00AEEF;
+		margin-top: -7px;
+		display: inline-block;
+		vertical-align: top;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}

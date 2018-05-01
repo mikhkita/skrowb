@@ -1,0 +1,98 @@
+.vacancy-list{
+
+	.vacancy-item{
+	    float: left;
+	    margin-right: 20px;
+	    margin-bottom: 20px;
+	    width: calc( 100% / 3 - 13px );
+	    background-color: #FFF;
+	    height: 184px;
+	    text-align: center;
+	    display: table;
+	    opacity: 0;
+		-webkit-tranform: translateY(15px);
+		   -moz-tranform: translateY(15px);
+		    -ms-tranform: translateY(15px);
+		   	 -o-tranform: translateY(15px);
+				tranform: translateY(15px);
+		-webkit-transition: color 200ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out;
+		   -moz-transition: color 200ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out;
+		    -ms-transition: color 200ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out;
+		   	 -o-transition: color 200ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out;
+				transition: color 200ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out;
+
+
+		&:nth-child(1){
+			-webkit-transition: transform 300ms 0ms ease-out, opacity 300ms 0ms ease-out;
+			   -moz-transition: transform 300ms 0ms ease-out, opacity 300ms 0ms ease-out;
+			    -ms-transition: transform 300ms 0ms ease-out, opacity 300ms 0ms ease-out;
+			   	 -o-transition: transform 300ms 0ms ease-out, opacity 300ms 0ms ease-out;
+					transition: transform 300ms 0ms ease-out, opacity 300ms 0ms ease-out;
+		}
+		&:nth-child(2){
+			-webkit-transition: transform 300ms 100ms ease-out, opacity 300ms 100ms ease-out;
+			   -moz-transition: transform 300ms 100ms ease-out, opacity 300ms 100ms ease-out;
+			    -ms-transition: transform 300ms 100ms ease-out, opacity 300ms 100ms ease-out;
+			   	 -o-transition: transform 300ms 100ms ease-out, opacity 300ms 100ms ease-out;
+					transition: transform 300ms 100ms ease-out, opacity 300ms 100ms ease-out;
+		}
+		&:nth-child(3){
+			-webkit-transition: transform 300ms 200ms ease-out, opacity 300ms 200ms ease-out;
+			   -moz-transition: transform 300ms 200ms ease-out, opacity 300ms 200ms ease-out;
+			    -ms-transition: transform 300ms 200ms ease-out, opacity 300ms 200ms ease-out;
+			   	 -o-transition: transform 300ms 200ms ease-out, opacity 300ms 200ms ease-out;
+					transition: transform 300ms 200ms ease-out, opacity 300ms 200ms ease-out;
+		}
+		&:nth-child(4){
+			-webkit-transition: transform 300ms 300ms ease-out, opacity 300ms 300ms ease-out;
+			   -moz-transition: transform 300ms 300ms ease-out, opacity 300ms 300ms ease-out;
+			    -ms-transition: transform 300ms 300ms ease-out, opacity 300ms 300ms ease-out;
+			   	 -o-transition: transform 300ms 300ms ease-out, opacity 300ms 300ms ease-out;
+					transition: transform 300ms 300ms ease-out, opacity 300ms 300ms ease-out;
+		}
+		&:nth-child(5){
+			-webkit-transition: transform 300ms 400ms ease-out, opacity 300ms 400ms ease-out;
+			   -moz-transition: transform 300ms 400ms ease-out, opacity 300ms 400ms ease-out;
+			    -ms-transition: transform 300ms 400ms ease-out, opacity 300ms 400ms ease-out;
+			   	 -o-transition: transform 300ms 400ms ease-out, opacity 300ms 400ms ease-out;
+					transition: transform 300ms 400ms ease-out, opacity 300ms 400ms ease-out;
+		}
+		&:nth-child(6){
+			-webkit-transition: transform 300ms 500ms ease-out, opacity 300ms 500ms ease-out;
+			   -moz-transition: transform 300ms 500ms ease-out, opacity 300ms 500ms ease-out;
+			    -ms-transition: transform 300ms 500ms ease-out, opacity 300ms 500ms ease-out;
+			   	 -o-transition: transform 300ms 500ms ease-out, opacity 300ms 500ms ease-out;
+					transition: transform 300ms 500ms ease-out, opacity 300ms 500ms ease-out;
+		}
+		&:nth-child(3n){
+			margin-right: -2px;
+		}
+		&:hover{
+			box-shadow: 0 0 44px 0 rgba(0,0,0,0.09);
+		}
+		&.active{
+			color: #FFF;
+			background-color: #00AEEF;
+		}
+		&__simple-title{
+			display: table-cell;
+			vertical-align: middle;
+			font-family: ProximaNova-Bold;
+			font-size: 31px;
+		}
+		&__big-title{
+			display: table-cell;
+			vertical-align: middle;
+			font-family: ProximaNova-Bold;
+
+			h3{
+				font-size: 66px;
+				line-height: 81px;
+			}
+			p{
+				font-size: 16px;
+				line-height: 20px;
+			}
+		}
+	}	
+}

@@ -1,0 +1,34 @@
+<header class="header">
+	<div class="header-fixed">
+		<div class="block clearfix">
+			<a href="main.html" class="header-logo"></a>
+			<ul class="header-menu">
+				<li class="header-menu__item b-go" data-hash="about" data-block=".main-about"><a href="#">About</a></li>
+				<li class="header-menu__item b-go" data-hash="industries" data-block=".main-indust"><a href="#">Industries</a></li>
+				<li class="header-menu__item b-go" data-hash="stacks" data-block=".main-stacks"><a href="#">Stacks</a></li>
+				<li class="header-menu__item b-go" data-hash="customers" data-block=".main-customers"><a href="#">Customers</a></li>
+				<li class="header-menu__item b-go" data-hash="careers" data-block=".main-careers"><a href="#">Careers</a></li>
+				<li class="header-menu__item b-go" data-hash="contacts" data-block=".main-contacts"><a href="#">Contacts</a></li>
+				<li class="header-menu__item"><a href="news.html">Blog</a></li>
+			</ul>
+			<ul class="header-lang">
+				<li class="header-lang__item"><a href="#">Ru</a></li>
+				<li class="header-lang__item active"><a href="#">En</a></li>
+				<li class="header-lang__item"><a href="#">De</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<main>
+	<% if(typeof withNav != "undefined" && withNav == true){ %>
+	<div class="block clearfix inner-content">
+		<div class="left-nav">
+			<ul class="left-menu">
+				<li><a href="news.html" class="active">News</a></li>
+				<li><a href="news.html">Press releases</a></li>
+				<li><a href="news.html">Articles</a></li>
+				<li><a href="papers.html">White papers</a></li>
+			</ul>
+		</div>	
+		<div class="right-content">
+	<% } %>
