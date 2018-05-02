@@ -3,9 +3,19 @@
 
 	h2.title{
 		margin-bottom: 28px;
+
+		@media (--mobile-md) {
+			margin-bottom: 14px;
+		}
 	}
 	h3.subtitle{
 		margin-bottom: 36px;
+
+		@media (--mobile-lg) {
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 30px;
+		}
 
 		&:hover{
 			text-decoration: underline;
@@ -14,13 +24,27 @@
 	.copyright{
 		position: absolute;
 		right: 55px;
-		bottom: -2px;
+		bottom: 44px;
 		font-size: 16px;
 		line-height: 20px;
 		font-family: ProximaNova-Regular;
+
+		@media (--mobile-lg) {
+			bottom: 0px;
+		}
+		@media (--mobile-md) {
+			position: relative;
+			left: 0px;
+			top: 0px;
+		}
 	}
 }
 .addresse{
+	margin-bottom: -44px;
+
+	@media (--mobile-lg) {
+		margin-bottom: 0px;
+	}
 
 	.addresse-item{
 		font-size: 16px;
@@ -28,6 +52,16 @@
 		display: inline-block;
 		vertical-align: top;
 		margin-right: 70px;
+		margin-bottom: 44px;
+
+		&:last-child{
+			@media (--mobile-lg) {
+				margin-bottom: 0px;	
+			}
+			@media (--mobile-md) {
+				margin-bottom: 44px;	
+			}
+		}
 
 		&:last-child{
 			margin-right: 0px;

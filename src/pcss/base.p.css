@@ -184,6 +184,10 @@ end*/
     width: 1200px;
     margin: 0px auto;
     text-align: left;
+
+    @media (--tablet) {
+        width: calc(100% - 40px);
+    }
 }
 
 /*------------------------------------*\
@@ -206,6 +210,10 @@ body {
     font-family: "Calibri-Regular";
     color: #3E4244;
     min-width: 1240px;
+
+    @media (--tablet) {
+        min-width: 100%;
+    }
 }
 
 body.inner{
@@ -272,6 +280,14 @@ p {
     font-size: 18px;
     line-height: 23px;
     margin-bottom: 15px;
+
+    @media (--tablet-v) {
+        font-size: 16px;
+    }
+
+    @media (--mobile-md) {
+        font-size: 14px;
+    }
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -433,6 +449,12 @@ h1{
     text-transform: uppercase;
     line-height: 42px;
     margin-bottom: 12px;
+
+    @media (--mobile-lg) {
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 14px;
+    }
 }
 
 h4.subtitle{
@@ -441,6 +463,15 @@ h4.subtitle{
     font-family: ProximaNova-Regular;
     margin-bottom: 50px;
     max-width: 400px;
+
+    @media (--tablet-v) {
+        margin-bottom: 40px;
+    }
+    @media (--mobile-lg) {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 22px;
+    }
 }
 
 h3.subtitle{
@@ -456,6 +487,10 @@ h3.subtitle{
     font-size: 29px;
     cursor: pointer;
 
+    @media (--mobile-lg) {
+        bottom: 0px;
+        left: 20px;
+    }
     &.icon-arrow-left{
 
     }
@@ -464,6 +499,18 @@ h3.subtitle{
     }
     &:hover{
         color: #00AEEF;
+    }
+    &.light{
+        color: #FFF;
+
+        @media (--mobile-lg) {
+            bottom: 0px;
+            left: 6px;
+        }
+        @media (--mobile-md) {
+            bottom: 0px;
+            left: 20px;
+        }
     }
 }
 
@@ -481,6 +528,10 @@ h3.subtitle{
             color: #FFF;
         }
     }
+
+    @media (--mobile-lg) {
+        padding: 40px 0px;
+    }
 }
 
 .text ul,
@@ -495,26 +546,10 @@ h3.subtitle{
         margin: 0 0 20px 0;
         padding-left: 36px;
 
-        @media (--mobile-lg) {
-            padding-left: 30px;
-        }
-
-        @media (--mobile-md) {
-            padding-left: 25px;
-        }
-
         &:before {
             content: '•';
             display: block;
             position: absolute 1px * * 12px;
-
-            @media (--mobile-lg) {
-                left: 25px;
-            }
-
-            @media (--mobile-md) {
-                left: 20px;
-            }
         }
     }
 }

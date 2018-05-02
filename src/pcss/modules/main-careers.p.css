@@ -6,11 +6,38 @@
 	
 	&__thumbs{
 		float: left;
-		width: calc( 50% - 10px );
+		width: calc( 50% + 10px );
+
+		@media (--mobile-lg) {
+			width: calc( 40% + 10px );
+		}
+
+		@media (--mobile-md) {
+			width: 100%;
+			line-height: 0px;
+			font-size: 0px;
+		}
+
+		.job-list__more{
+			margin-bottom: 24px;
+		}
 	}
 	&__jobs{
 		float: right;
 		width: calc( 50% - 10px );
+
+		@media (--mobile-lg) {
+			width: calc( 60% - 10px );
+		}
+
+		@media (--mobile-md) {
+			display: none;
+		}
+
+		.job-list{
+			display: block !important;
+			opacity: 1 !important;
+		}
 	}
 	&.active .vacancy-item{
 		opacity: 1;

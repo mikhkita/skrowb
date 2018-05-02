@@ -7,7 +7,9 @@ import './vendor/slick.min.js';
 $(() => {
 	var myWidth = 0,
 		myHeight = 0,
-		isMain = $("body.main").length;
+		isMain = $("body.main").length,
+		isMobileMd = false,
+		isMobile = false;
 	// function calcInvest(){
 	// 	var cols = [0, 0, 0];
  //    	$(".indust-thumbs__item").each(function(){
@@ -48,10 +50,36 @@ $(() => {
 	    if( $(".papers").length ){
 	    	calcWhitePapersHeight();
 	    }
-	}
 
-	$(window).resize(resize);
-    resize();
+	    if( $(".indust-thumbs__item").length ){
+	    	moveIndustHover($(".indust-thumbs__item.active"));
+	    }
+
+	    $(".customers__item").each(function(){
+	    	var height = $(this).height();
+	    	$(this).find(".customers__item-front").css("height", height);
+	    });
+
+	    if( $(".main-careers").length ){
+	    	if( !isMobileMd && myWidth < 480 ){
+	    		careersMobile();
+	    		isMobileMd = true;
+	    	}else if( isMobileMd && myWidth >= 480 ){
+	    		careersDesktop();
+	    		isMobileMd = false;
+	    	}
+	    }
+
+	    if( $(".main-customers").length ){
+	    	if( !isMobile && myWidth < 768 ){
+	    		customersMobile();
+	    		isMobile = true;
+	    	}else if( isMobile && myWidth >= 768 ){
+	    		customersDesktop();
+	    		isMobile = false;
+	    	}
+	    }
+	}
 
 	function whenScroll(){
 		var scroll = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
@@ -91,8 +119,10 @@ $(() => {
 		}
 	}
 
-	$(window).scroll(whenScroll);
-	$(window).on("load", whenScroll);
+	$(".main-about .news-item__more").click(function(){
+		$(this).parents(".main-about").find(".mobile-hidden").fadeIn(300);
+		$(this).hide();
+	});
 
 	// Main Indust Slide --------------------------------- Main Indust Slide
 	$('.indust-slider').slick({
@@ -105,7 +135,15 @@ $(() => {
         fade: true,
         prevArrow: '<div class="slick-arrow-left icon-arrow-left"></div>',
         nextArrow: '<div class="slick-arrow-right icon-arrow-right"></div>',
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        responsive: [
+	    	{
+	    		breakpoint: 768,
+	    		settings: {
+	    			fade: false
+	    		}
+	    	}
+	  	]
     }); 
 
     if( $(".indust-thumbs__item").length ){
@@ -128,37 +166,105 @@ $(() => {
     		}, 300);
     	});
 
-    	function moveIndustHover($el){
-    		$(".indust-thumbs__hover").css({
-    			width: $el.width() + 25,
-    			height: $el.height() + 30,
-    			left: $el.position().left - 20,
-    			top: $el.position().top - 15
-    		});
-    	}
-
     	$('.indust-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 	    	$(".indust-thumbs__item.active").removeClass("active");
 	        $(".indust-thumbs__item").eq(nextSlide).addClass("active");
 	        moveIndustHover($(".indust-thumbs__item.active"));
 	    });
-
-    	moveIndustHover($(".indust-thumbs__item.active"));
     }
+    function moveIndustHover($el){
+		$(".indust-thumbs__hover").css({
+			width: $el.width() + 25,
+			height: $el.height() + 30,
+			left: $el.position().left - 20,
+			top: $el.position().top - 15
+		});
+	}
     // Main Indust Slide --------------------------------- Main Indust Slide
+
+    // Main Stacks Slide --------------------------------- Main Stacks Slide
+    $('.stacks').slick({
+        dots: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,  
+        cssEase: 'ease', 
+        speed: 500,
+        prevArrow: '<div class="slick-arrow-left icon-arrow-left"></div>',
+        nextArrow: '<div class="slick-arrow-right icon-arrow-right"></div>',
+        adaptiveHeight: true,
+        responsive: [
+	    	{
+	    		breakpoint: 768,
+	    		settings: {
+	    			slidesToShow: 2,
+	    			slidesToScroll: 1
+	    		}
+	    	},
+	    	{
+	    		breakpoint: 480,
+	    		settings: {
+	    			slidesToShow: 1,
+	    			slidesToScroll: 1
+	    		}
+	    	}
+	  	]
+    });
+    // Main Stacks Slide --------------------------------- Main Stacks Slide
 
     // Main Customers Slide ------------------------------ Main Customers Slide
     $(".customers__item").hover(function(){
-    	var height = $(this).height() - $(this).find(".customers__item-text").height() - 28;
-    	$(this).find(".customers__item-front").css("height", height);
+    	if( myWidth > 768 ){
+    		var height = $(this).height() - $(this).find(".customers__item-text").height() - 28;
+    		$(this).find(".customers__item-front").css("height", height);
+    	}
     }, function(){
     	var height = $(this).height();
     	$(this).find(".customers__item-front").css("height", height);
     });
+
+    function customersDesktop(){
+
+    }
+    
+    function customersMobile(){
+    	$('.customers').slick({
+	        dots: false,
+	        slidesToShow: 2,
+	        slidesToScroll: 2,
+	        infinite: true,  
+	        cssEase: 'ease', 
+	        speed: 500,
+	        prevArrow: '<div class="slick-arrow-left icon-arrow-left light"></div>',
+	        nextArrow: '<div class="slick-arrow-right icon-arrow-right light"></div>',
+	        adaptiveHeight: true,
+	        responsive: [
+	        	{
+		    		breakpoint: 5000,
+		    		settings: "unslick"
+		    	},
+		    	{
+		    		breakpoint: 768,
+		    		settings: {
+		    			slidesToShow: 2,
+		    			slidesToScroll: 1,
+		    			centerPadding: '13px',
+		    		}
+		    	},
+		    	{
+		    		breakpoint: 480,
+		    		settings: {
+		    			slidesToShow: 1,
+		    			slidesToScroll: 1
+		    		}
+		    	}
+		  	]
+	    });
+    }
     // Main Customers Slide ------------------------------ Main Customers Slide
 
     // Main Careers Slide -------------------------------- Main Careers Slide
-    $(".job-list__more").click(function(){
+    $("body").on("click", ".job-list__more", function(){
     	var $cont = $(this).parents(".job-list");
 
     	$cont.addClass("opened");
@@ -167,16 +273,54 @@ $(() => {
     	return false;
     });
 
-    $(".vacancy-item").click(function(){
+    var careersTog = false;
+    function careersMobile(){
+    	var index = $(".tabs-block.active .vacancy-item.active").index();
+		$(".vacancy-item.active").removeClass("active");
+		$(".tabs-block.active .vacancy-item").eq(index).click();
+
+    	if( careersTog ) return true;
+
+    	$(".job-list").animate({
+			height: "hide",
+			opacity: 0
+		}).removeClass("active");
+
+		careersTog = true;
+    }
+
+	function careersDesktop(){
+		var index = $(".tabs-block.active .vacancy-item.active").index();
+		$(".job-list").hide();
+		$(".vacancy-item.active").removeClass("active");
+
+		$(".tabs-block.active .vacancy-item").eq(index).click();
+	}
+
+    $(".vacancy-item").click(function(e, toggle){
     	if( $(this).hasClass("active") ) return false;
     	var $cont = $(this).parents(".tabs-block");
 
     	$cont.find(".vacancy-item.active").removeClass("active");
-    	$cont.find(".job-list.active").fadeOut(0).removeClass("active");
-    	$("#"+$(this).attr("data-id"))
-    		.fadeIn(0)
-    		.addClass("active");
-    	$(this).addClass("active");
+
+    	if( myWidth >= 480 ){
+    		$cont.find(".tabs-block__jobs").html( $("#"+$(this).attr("data-id")).clone() );
+    		$(this).addClass("active");
+    	}else{
+    		if( toggle !== true ){
+    			$cont.find(".job-list.active").animate({
+	    			height: "hide",
+	    			opacity: 0
+	    		}).removeClass("active");
+
+	    		$("#"+$(this).attr("data-id")).animate({
+	    			height: "show",
+	    			opacity: 1
+	    		}).addClass("active");
+
+	    		$(this).addClass("active");
+    		}
+    	}
 
     	return false;
     });
@@ -189,16 +333,12 @@ $(() => {
     	$("#"+$(this).attr("data-id"))
     		.fadeIn(0)
     		.addClass("active")
-    		.find(".vacancy-item").eq(0).click();
+    		.find(".vacancy-item").eq(0).trigger("click", true);
 
     	$(this).addClass("active");
 
     	return false;
     });
-
-    if( $(".tabs__item").length ){
-    	$(".tabs__item").eq(0).click();
-    }
     // Main Careers Slide -------------------------------- Main Careers Slide
 
     // White Papers -------------------------------------- White Papers
@@ -247,4 +387,14 @@ $(() => {
         }, $this.index()*delay + delay);
     });
 	// Show animation ------------------------------------ Show animation
+
+	$(window).resize(resize);
+    resize();
+
+    $(window).scroll(whenScroll);
+	$(window).on("load", whenScroll);
+
+	if( $(".tabs__item").length ){
+    	$(".tabs__item").eq(0).click();
+    }
 });

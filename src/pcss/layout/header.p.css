@@ -3,6 +3,10 @@
 	position: relative;
 	z-index: 1000;
 
+	@media (--tablet-v) {
+		display: none;
+	}
+
 	.header-fixed{
 		width: 100%;
 		padding: 40px 0px 36px;
@@ -37,7 +41,7 @@ body.main .header .header-fixed{
 	float: left;
 	text-align: justify;
 	margin-bottom: -24px;
-	margin-top: 5px;
+	margin-top: 1px;
 
 	&__item{
 		display: inline-block;

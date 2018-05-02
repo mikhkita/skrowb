@@ -1,8 +1,17 @@
 .job-list{
 	display: none;
 
+	@media (--mobile-md) {
+		display: inline-block;
+		overflow: hidden;
+	}
+
 	.job-item{
-		margin-bottom: 36px;
+		padding-bottom: 16px;
+
+		@media (--mobile-md) {
+			padding-bottom: 24px;
+		}
 
 		&__title{
 			font-family: ProximaNova-Bold;

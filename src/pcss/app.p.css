@@ -66,6 +66,7 @@
 
 @custom-media --desktop (width >= 1240px);
 @custom-media --tablet (width < 1239px);
+@custom-media --tablet-md (width < 1130px);
 @custom-media --tablet-v (width < 1024px);
 @custom-media --mobile-lg (width < 768px);
 @custom-media --mobile-md (width < 480px);

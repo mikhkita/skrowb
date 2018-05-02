@@ -20,7 +20,7 @@
 			</div>
 			<div class="about-advantages__item">
 				<img class="about-advantages__item-image" src="i/graph.svg"/>
-				<p>high-performance, scalable,<br>high-load, distributed architecture server components;</p>
+				<p>high-performance, scalable, <nobr>high-load,</nobr> distributed architecture server components;</p>
 			</div>
 			<div class="about-advantages__item">
 				<img class="about-advantages__item-image" src="i/git.svg"/>
@@ -28,9 +28,12 @@
 			</div>
 		</div>
 		<p>We can deliver the most value to customers who need to create a product that works in a sophisticated application domain, with high project failure risks due to underestimated project complexity or inadequate expertise of the performing party, and where the architecture has to be carefully elaborated and compared to similar approaches using a viable PoC, and high quality has to be maintained by having IT professionals of different profiles in the same R&D department: developers, QA engineers, system administrators, technical writers and project managers.</p>
-		<p>As of now, our team includes over 40 IT professionals and other miscellaneous personnel.</p>
-		<p>In the course of project delivery we aim not only at meeting customers requirements but also strive to maintain high quality at every stage so that further project development will be straightforward and predictable.</p>
-		<p>We use best development practices, such as PoC, DDD, continuous integration, Scrum, automated and manual QA and Git-flow.</p>
+		<div class="mobile-hidden">
+			<p>As of now, our team includes over 40 IT professionals and other miscellaneous personnel.</p>
+			<p>In the course of project delivery we aim not only at meeting customers requirements but also strive to maintain high quality at every stage so that further project development will be straightforward and predictable.</p>
+			<p>We use best development practices, such as PoC, DDD, continuous integration, Scrum, automated and manual QA and Git-flow.</p>
+		</div>
+		<a href="#" class="news-item__more">Read more ...</a>
 	</div>
 </div>
 
@@ -62,6 +65,7 @@
 			<div class="indust-slider">
 				<% for( arItem of arItems ){ %>
 				<div class="indust-slider__item">
+						<span class="indust-slider__item-back <%- arItem.class %>"></span>
 						<h3 class="indust-slider__item-title"><%- arItem.title.replace("<br>"," ") %></h3>
 						<div class="indust-slider__item-text">We can deliver the most value to customers who need to create a product that works in a sophisticated application domain, with high project failure risks due to underestimated project complexity or inadequate expertise of the performing party, and where the architecture has to be carefully elaborated and compared to similar approaches using a viable PoC, and high quality has to be maintained by having IT professionals of different profiles in the same R&D department: developers, QA engineers, system administrators, technical writers and project managers.</div>
 					</div>
@@ -209,23 +213,9 @@
 		</div>
 		<div class="tabs-block clearfix" id="city-1">
 			<div class="tabs-block__thumbs vacancy-list clearfix">
-				<a href="#" class="vacancy-item" data-id="job-1-1">
+				<h3 class="vacancy-item" data-id="job-1-1">
 					<div class="vacancy-item__simple-title">JAVA</div>
-				</a>
-				<a href="#" class="vacancy-item" data-id="job-1-2">
-					<div class="vacancy-item__simple-title">SCALA</div>
-				</a>
-				<a href="#" class="vacancy-item" data-id="job-1-3">
-					<div class="vacancy-item__simple-title">DevOps</div>
-				</a>
-				<a href="#" class="vacancy-item" data-id="job-1-4">
-					<div class="vacancy-item__big-title">
-						<h3>FE</h3>
-						<p>Front End</p>
-					</div>
-				</a>
-			</div>
-			<div class="tabs-block__jobs">
+				</h3>
 				<div class="job-list" id="job-1-1">
 					<div class="job-item">
 						<h3 class="job-item__title">Java Junior</h3>
@@ -253,6 +243,9 @@
 					</div>
 					<a href="#" class="job-list__more">Show more (<span>2</span>)</a>
 				</div>
+				<h3 class="vacancy-item" data-id="job-1-2">
+					<div class="vacancy-item__simple-title">SCALA</div>
+				</h3>
 				<div class="job-list" id="job-1-2">
 					<div class="job-item">
 						<h3 class="job-item__title">Java Junior</h3>
@@ -263,6 +256,9 @@
 						</div>
 					</div>
 				</div>
+				<h3 class="vacancy-item" data-id="job-1-3">
+					<div class="vacancy-item__simple-title">DevOps</div>
+				</h3>
 				<div class="job-list" id="job-1-3">
 					<div class="job-item">
 						<h3 class="job-item__title">Java Junior</h3>
@@ -273,6 +269,12 @@
 						</div>
 					</div>
 				</div>
+				<h3 class="vacancy-item" data-id="job-1-4">
+					<div class="vacancy-item__big-title">
+					<h3>FE</h3>
+						<p>Front End</p>
+					</div>
+				</h3>
 				<div class="job-list" id="job-1-4">
 					<div class="job-item">
 						<h3 class="job-item__title">Java Mid</h3>
@@ -284,20 +286,15 @@
 					</div>
 				</div>
 			</div>
+			<div class="tabs-block__jobs">
+				
+			</div>
 		</div>
 		<div class="tabs-block clearfix" id="city-2">
 			<div class="tabs-block__thumbs vacancy-list clearfix">
-				<a href="#" class="vacancy-item" data-id="job-2-1">
+				<h3 class="vacancy-item" data-id="job-2-1">
 					<div class="vacancy-item__simple-title">JAVA</div>
-				</a>
-				<a href="#" class="vacancy-item" data-id="job-2-2">
-					<div class="vacancy-item__simple-title">SCALA</div>
-				</a>
-				<a href="#" class="vacancy-item" data-id="job-2-3">
-					<div class="vacancy-item__simple-title">DevOps</div>
-				</a>
-			</div>
-			<div class="tabs-block__jobs">
+				</h3>
 				<div class="job-list" id="job-2-1">
 					<div class="job-item">
 						<h3 class="job-item__title">Java Junior</h3>
@@ -325,6 +322,9 @@
 					</div>
 					<a href="#" class="job-list__more">Show more (<span>2</span>)</a>
 				</div>
+				<h3 class="vacancy-item" data-id="job-2-2">
+					<div class="vacancy-item__simple-title">SCALA</div>
+				</h3>
 				<div class="job-list" id="job-2-2">
 					<div class="job-item">
 						<h3 class="job-item__title">Java Junior</h3>
@@ -335,6 +335,9 @@
 						</div>
 					</div>
 				</div>
+				<h3 class="vacancy-item" data-id="job-2-3">
+					<div class="vacancy-item__simple-title">DevOps</div>
+				</h3>
 				<div class="job-list" id="job-2-3">
 					<div class="job-item">
 						<h3 class="job-item__title">Java Junior</h3>
@@ -346,26 +349,15 @@
 					</div>
 				</div>
 			</div>
+			<div class="tabs-block__jobs">
+				
+			</div>
 		</div>
 		<div class="tabs-block clearfix" id="city-3">
 			<div class="tabs-block__thumbs vacancy-list clearfix">
-				<a href="#" class="vacancy-item" data-id="job-3-1">
+				<h3 class="vacancy-item" data-id="job-3-1">
 					<div class="vacancy-item__simple-title">JAVA</div>
-				</a>
-				<a href="#" class="vacancy-item" data-id="job-3-2">
-					<div class="vacancy-item__simple-title">SCALA</div>
-				</a>
-				<a href="#" class="vacancy-item" data-id="job-3-3">
-					<div class="vacancy-item__simple-title">DevOps</div>
-				</a>
-				<a href="#" class="vacancy-item" data-id="job-3-4">
-					<div class="vacancy-item__big-title">
-						<h3>FE</h3>
-						<p>Front End</p>
-					</div>
-				</a>
-			</div>
-			<div class="tabs-block__jobs">
+				</h3>
 				<div class="job-list" id="job-3-1">
 					<div class="job-item">
 						<h3 class="job-item__title">Java Junior</h3>
@@ -393,6 +385,9 @@
 					</div>
 					<a href="#" class="job-list__more">Show more (<span>2</span>)</a>
 				</div>
+				<h3 class="vacancy-item" data-id="job-3-2">
+					<div class="vacancy-item__simple-title">SCALA</div>
+				</h3>
 				<div class="job-list" id="job-3-2">
 					<div class="job-item">
 						<h3 class="job-item__title">Java Junior</h3>
@@ -403,6 +398,9 @@
 						</div>
 					</div>
 				</div>
+				<h3 class="vacancy-item" data-id="job-3-3">
+					<div class="vacancy-item__simple-title">DevOps</div>
+				</h3>
 				<div class="job-list" id="job-3-3">
 					<div class="job-item">
 						<h3 class="job-item__title">Java Junior</h3>
@@ -413,6 +411,12 @@
 						</div>
 					</div>
 				</div>
+				<h3 class="vacancy-item" data-id="job-3-4">
+					<div class="vacancy-item__big-title">
+					<h3>FE</h3>
+						<p>Front End</p>
+					</div>
+				</h3>
 				<div class="job-list" id="job-3-4">
 					<div class="job-item">
 						<h3 class="job-item__title">Java Mid</h3>
@@ -423,6 +427,9 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="tabs-block__jobs">
+				
 			</div>
 		</div>
 	</div>

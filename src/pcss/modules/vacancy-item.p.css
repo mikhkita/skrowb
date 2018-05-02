@@ -4,7 +4,7 @@
 	    float: left;
 	    margin-right: 20px;
 	    margin-bottom: 20px;
-	    width: calc( 100% / 3 - 13px );
+	    width: calc( (100% - 22px) / 3 - 13px );
 	    background-color: #FFF;
 	    height: 184px;
 	    text-align: center;
@@ -21,6 +21,22 @@
 		   	 -o-transition: color 200ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out;
 				transition: color 200ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out;
 
+		@media (--tablet) {
+			height: calc( (50vw - 32px) / 3 - 13px );
+		}
+		@media (--tablet-v) {
+			width: calc( (100% - 22px) / 2 - 10px );
+			height: calc( (50vw - 32px) / 2 - 10px );
+		}
+		@media (--mobile-lg) {
+			width: calc( 100% - 22px );
+			height: 90px;
+		}
+		@media (--mobile-md) {
+			width: calc( 100% );
+			height: 49px;
+			/* margin-bottom: 0px; */
+		}
 
 		&:nth-child(1){
 			-webkit-transition: transform 300ms 0ms ease-out, opacity 300ms 0ms ease-out;
@@ -29,43 +45,82 @@
 			   	 -o-transition: transform 300ms 0ms ease-out, opacity 300ms 0ms ease-out;
 					transition: transform 300ms 0ms ease-out, opacity 300ms 0ms ease-out;
 		}
-		&:nth-child(2){
+		&:nth-child(3){
 			-webkit-transition: transform 300ms 100ms ease-out, opacity 300ms 100ms ease-out;
 			   -moz-transition: transform 300ms 100ms ease-out, opacity 300ms 100ms ease-out;
 			    -ms-transition: transform 300ms 100ms ease-out, opacity 300ms 100ms ease-out;
 			   	 -o-transition: transform 300ms 100ms ease-out, opacity 300ms 100ms ease-out;
 					transition: transform 300ms 100ms ease-out, opacity 300ms 100ms ease-out;
 		}
-		&:nth-child(3){
+		&:nth-child(5){
 			-webkit-transition: transform 300ms 200ms ease-out, opacity 300ms 200ms ease-out;
 			   -moz-transition: transform 300ms 200ms ease-out, opacity 300ms 200ms ease-out;
 			    -ms-transition: transform 300ms 200ms ease-out, opacity 300ms 200ms ease-out;
 			   	 -o-transition: transform 300ms 200ms ease-out, opacity 300ms 200ms ease-out;
 					transition: transform 300ms 200ms ease-out, opacity 300ms 200ms ease-out;
 		}
-		&:nth-child(4){
+		&:nth-child(7){
 			-webkit-transition: transform 300ms 300ms ease-out, opacity 300ms 300ms ease-out;
 			   -moz-transition: transform 300ms 300ms ease-out, opacity 300ms 300ms ease-out;
 			    -ms-transition: transform 300ms 300ms ease-out, opacity 300ms 300ms ease-out;
 			   	 -o-transition: transform 300ms 300ms ease-out, opacity 300ms 300ms ease-out;
 					transition: transform 300ms 300ms ease-out, opacity 300ms 300ms ease-out;
 		}
-		&:nth-child(5){
+		&:nth-child(9){
 			-webkit-transition: transform 300ms 400ms ease-out, opacity 300ms 400ms ease-out;
 			   -moz-transition: transform 300ms 400ms ease-out, opacity 300ms 400ms ease-out;
 			    -ms-transition: transform 300ms 400ms ease-out, opacity 300ms 400ms ease-out;
 			   	 -o-transition: transform 300ms 400ms ease-out, opacity 300ms 400ms ease-out;
 					transition: transform 300ms 400ms ease-out, opacity 300ms 400ms ease-out;
 		}
-		&:nth-child(6){
+		&:nth-child(11){
 			-webkit-transition: transform 300ms 500ms ease-out, opacity 300ms 500ms ease-out;
 			   -moz-transition: transform 300ms 500ms ease-out, opacity 300ms 500ms ease-out;
 			    -ms-transition: transform 300ms 500ms ease-out, opacity 300ms 500ms ease-out;
 			   	 -o-transition: transform 300ms 500ms ease-out, opacity 300ms 500ms ease-out;
 					transition: transform 300ms 500ms ease-out, opacity 300ms 500ms ease-out;
 		}
-		&:nth-child(3n){
-			margin-right: -2px;
+		&:nth-child(13){
+			-webkit-transition: transform 300ms 600ms ease-out, opacity 300ms 600ms ease-out;
+			   -moz-transition: transform 300ms 600ms ease-out, opacity 300ms 600ms ease-out;
+			    -ms-transition: transform 300ms 600ms ease-out, opacity 300ms 600ms ease-out;
+			   	 -o-transition: transform 300ms 600ms ease-out, opacity 300ms 600ms ease-out;
+					transition: transform 300ms 600ms ease-out, opacity 300ms 600ms ease-out;
+		}
+		&:nth-child(15){
+			-webkit-transition: transform 300ms 700ms ease-out, opacity 300ms 700ms ease-out;
+			   -moz-transition: transform 300ms 700ms ease-out, opacity 300ms 700ms ease-out;
+			    -ms-transition: transform 300ms 700ms ease-out, opacity 300ms 700ms ease-out;
+			   	 -o-transition: transform 300ms 700ms ease-out, opacity 300ms 700ms ease-out;
+					transition: transform 300ms 700ms ease-out, opacity 300ms 700ms ease-out;
+		}
+		&:nth-child(17){
+			-webkit-transition: transform 300ms 800ms ease-out, opacity 300ms 800ms ease-out;
+			   -moz-transition: transform 300ms 800ms ease-out, opacity 300ms 800ms ease-out;
+			    -ms-transition: transform 300ms 800ms ease-out, opacity 300ms 800ms ease-out;
+			   	 -o-transition: transform 300ms 800ms ease-out, opacity 300ms 800ms ease-out;
+					transition: transform 300ms 800ms ease-out, opacity 300ms 800ms ease-out;
+		}
+		&:nth-child(19){
+			-webkit-transition: transform 300ms 900ms ease-out, opacity 300ms 900ms ease-out;
+			   -moz-transition: transform 300ms 900ms ease-out, opacity 300ms 900ms ease-out;
+			    -ms-transition: transform 300ms 900ms ease-out, opacity 300ms 900ms ease-out;
+			   	 -o-transition: transform 300ms 900ms ease-out, opacity 300ms 900ms ease-out;
+					transition: transform 300ms 900ms ease-out, opacity 300ms 900ms ease-out;
+		}
+		&:nth-child(21){
+			-webkit-transition: transform 300ms 1000ms ease-out, opacity 300ms 1000ms ease-out;
+			   -moz-transition: transform 300ms 1000ms ease-out, opacity 300ms 1000ms ease-out;
+			    -ms-transition: transform 300ms 1000ms ease-out, opacity 300ms 1000ms ease-out;
+			   	 -o-transition: transform 300ms 1000ms ease-out, opacity 300ms 1000ms ease-out;
+					transition: transform 300ms 1000ms ease-out, opacity 300ms 1000ms ease-out;
+		}
+		&:nth-child(23){
+			-webkit-transition: transform 300ms 1100ms ease-out, opacity 300ms 1100ms ease-out;
+			   -moz-transition: transform 300ms 1100ms ease-out, opacity 300ms 1100ms ease-out;
+			    -ms-transition: transform 300ms 1100ms ease-out, opacity 300ms 1100ms ease-out;
+			   	 -o-transition: transform 300ms 1100ms ease-out, opacity 300ms 1100ms ease-out;
+					transition: transform 300ms 1100ms ease-out, opacity 300ms 1100ms ease-out;
 		}
 		&:hover{
 			box-shadow: 0 0 44px 0 rgba(0,0,0,0.09);
@@ -88,10 +143,25 @@
 			h3{
 				font-size: 66px;
 				line-height: 81px;
+
+				@media (--mobile-lg) {
+					font-size: 35px;
+					line-height: 40px;
+					margin-top: 14px;
+				}
+
+				@media (--mobile-md) {
+					display: none;
+				}
 			}
 			p{
 				font-size: 16px;
 				line-height: 20px;
+
+				@media (--mobile-md) {
+					font-size: 31px;
+					margin-bottom: 0px;
+				}
 			}
 		}
 	}	
